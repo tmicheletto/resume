@@ -1,0 +1,248 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%-------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+% --- THIS IS THE NEW COMMAND TO FIX YOUR ERROR ---
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+% ------------------------------------------------
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADER----------
+\begin{center}
+    \textbf{\Huge \scshape Timothy Micheletto} \\ \vspace{1pt}
+    Staff MLOps Engineer $|$ Engineering Leader \\ \vspace{1pt}
+    \small 0434 799 667 $|$ \href{mailto:tim.micheletto@gmail.com}{\underline{tim.micheletto@gmail.com}} $|$
+    \href{https://linkedin.com/in/timmicheletto}{\underline{linkedin.com/in/timmicheletto}} $|$
+    Melbourne, Australia
+\end{center}
+
+
+%-----------SUMMARY-----------
+\section{Professional Summary}
+  \small{Engineering leader and Staff Engineer with 20+ years of experience designing distributed systems at scale. Specialized in bridging the gap between Applied Science and Product Engineering to ship TB-scale inference pipelines and GenAI products. Proven track record of driving architectural strategy and shipping velocity, bringing a rigorous software engineering mindset to the challenges of scaling ML in production.}
+
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Python, Go (Golang), TypeScript/NodeJS, SQL, Scala, C\#} \\
+     \textbf{MLOps \& Data}{: Dask, Prefect, TensorFlow, RAG, Batch Inference, Model Observability, Snowflake, Postgres, DynamoDB} \\
+     \textbf{Cloud \& Platform}{: AWS (EKS, ECS, Lambda, Kinesis), Kubernetes, Terraform, Docker, FastAPI, Event-Driven Architecture}
+    }}
+ \end{itemize}
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    % XERO (Grouped)
+    \resumeSubheading
+      {Xero}{Melbourne, Australia}
+      {Senior Engineer - Machine Learning (Research Team)}{Sep 2024 -- Sep 2025}
+      \resumeItemListStart
+        \resumeItem{Architected a \textbf{specialist model orchestrator} to maximize precision, implementing logic to dynamically select optimal predictions from an ensemble of specialist models.}
+        \resumeItem{Engineered \textbf{TB-scale distributed data pipelines} utilizing \textbf{Dask} and Python to perform batch inference on multi-terabyte datasets, establishing the foundational framework for offline model evaluation.}
+        \resumeItem{Core contributor to the engineering delivery of \textbf{JAX (Just Ask Xero)}, a headline GenAI feature announced at XeroCon 2025, specifically focusing on the automated bank reconciliation model.}
+        \resumeItem{Established reproducible data foundations by building automated pipelines to generate training/validation datasets from OLTP sources, significantly accelerating experimentation cycles for Applied Scientists.}
+      \resumeItemListEnd
+
+    \resumeSubSubheading
+      {Engineering Manager - Machine Learning}{Sep 2023 -- Sep 2024}
+      \resumeItemListStart
+        \resumeItem{Led the end-to-end engineering delivery of Xero’s first \textbf{GenAI product} (RAG-based customer support agent), coordinating cross-functional alignment between Applied Science and Customer Experience teams.}
+        \resumeItem{Designed and executed the organizational restructuring of a 14-engineer team into 3 domain-aligned pods, resulting in optimized delivery velocity and reduced communication overhead.}
+        \resumeItem{Managed 9 direct reports---personally recruiting 3---and designed the department-wide interview loop to establish rigorous standards for MLOps competencies.}
+        \resumeItem{Championed the unified \textbf{Batch Inference Platform} initiative, standardizing architectural patterns for all batch AI products to eliminate fragmentation and reduce technical debt.}
+        \resumeItem{Directed the technical implementation of GDPR "Right to be Forgotten" workflows across distributed data stores, ensuring compliance without disrupting production availability.}
+      \resumeItemListEnd
+
+    \resumeSubSubheading
+      {Staff Engineer - Data Applications}{Mar 2022 -- Sep 2023}
+      \resumeItemListStart
+        \resumeItem{Architected and led the implementation of the Cash flow Understanding and Prediction Service (CUPS) utilizing \textbf{Prefect} for orchestration; led the project from inception to General Availability (GA).}
+        \resumeItem{Designed distributed batch inference pipelines processing terabytes of data daily, generating cash flow predictions for the entire Xero customer base.}
+        \resumeItem{Standardized \textbf{Terraform} patterns for IAM Roles, significantly reducing infrastructure provisioning time for new ML services.}
+        \resumeItem{Built high-throughput, low-latency APIs (\textbf{FastAPI/AWS EKS/DynamoDB}) to serve predictions to millions of customers.}
+        \resumeItem{Defined and implemented SLIs/SLOs for ML services to ensure high availability and enable proactive, data-driven incident response.}
+      \resumeItemListEnd
+
+    \resumeSubSubheading
+      {Senior Engineer - Data Applications}{May 2021 -- Mar 2022}
+      \resumeItemListStart
+        \resumeItem{Accelerated the deployment of heuristic cash flow models by building automated CI/CD pipelines for Python packages, reducing deployment friction between Science and Engineering.}
+      \resumeItemListEnd
+
+    % LATITUDE
+    \resumeSubheading
+      {Latitude Financial Services}{Melbourne, Australia}
+      {Lead Software Engineer}{Apr 2020 -- May 2021}
+      \resumeItemListStart
+        \resumeItem{Spearheaded the architectural transformation of the Identity Platform (\textbf{Okta/Golang}), enabling Single Sign-On (SSO) for millions of customers.}
+        \resumeItem{Executed the migration of legacy user bases from AWS Cognito to Okta with zero downtime.}
+        \resumeItem{Acted as Technical Product Manager for a platform team of 4 engineers, defining roadmap requirements and driving execution.}
+      \resumeItemListEnd
+
+    % SEEK (Grouped)
+    \resumeSubheading
+      {SEEK}{Melbourne, Australia}
+      {Principal Software Developer}{Jul 2018 -- Mar 2020}
+      \resumeItemListStart
+        \resumeItem{Selected for a high-priority "Tiger Team" to decompose legacy monoliths into modern cloud-native microservices (\textbf{AWS ECS/TypeScript/DynamoDB}) using the \textbf{Strangler Fig pattern}.}
+        \resumeItem{Led the implementation of a Resume Parsing pipeline (Scala) and a serverless Profile Nudge System (AWS Lambda) to interactively capture missing profile attributes and enrich the candidate data graph.}
+      \resumeItemListEnd
+
+    \resumeSubSubheading
+      {Senior Software Developer}{Mar 2016 -- Jul 2018}
+      \resumeItemListStart
+        \resumeItem{Developed event-driven microservices (NodeJS/AWS SNS/SQS) to power real-time candidate feedback loops.}
+        \resumeItem{Integrated complex variable pricing logic into high-traffic C\# ASP.NET monoliths.}
+      \resumeItemListEnd
+
+    % LEICA
+    \resumeSubheading
+      {Leica Biosystems}{Melbourne, Australia}
+      {Senior Software Engineer}{May 2013 -- Mar 2016}
+      \resumeItemListStart
+        \resumeItem{Developed IoT-style monitoring dashboards for pathology laboratory equipment using AngularJS and C\#.}
+        \resumeItem{Built the Inventory Manager application to optimize consumable reordering for lab supervisors.}
+      \resumeItemListEnd
+
+    % EARLY CAREER
+    \resumeSubheading
+      {Early Career}{2003 -- 2012}
+      {Various Roles: Integration Consultant, Lead Developer, Graduate}{UK \& Australia}
+      \resumeItemListStart
+        \resumeItem{Enterprise Integration Consultant | Various Contracts (UK) (2008 -- 2012)}
+        \resumeItem{Lead Integration Developer | Linfox (2007 -- 2008)}
+        \resumeItem{Consultant / Graduate | Oakton / Downer (2003 -- 2006)}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------EDUCATION & CERTIFICATIONS-----------
+\section{Education \& Certifications}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {RMIT University}{Melbourne, Australia}
+      {Bachelor of Engineering (Computer Systems)}{2000 -- 2002}
+
+    \vspace{2pt}
+    \item \textbf{Certifications}:
+    \small{
+      DeepLearning.AI: Agentic AI (Nov 2025) $|$ Stanford University Online: Machine Learning Specialization (Oct 2025)
+    }
+  \resumeSubHeadingListEnd
+
+
+%-----------INTERESTS-----------
+\section{Interests}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     Surfing, Motorcycles, Crossfit, Machine Learning, Data Engineering
+    }}
+ \end{itemize}
+
+\end{document}
