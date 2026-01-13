@@ -1,7 +1,6 @@
 %-------------------------
 % Resume in Latex
-% Author : Jake Gutierrez
-% Based off of: https://github.com/sb2nov/resume
+% Author : Timothy Micheletto (Edited - V3)
 % License : MIT
 %-------------------------
 
@@ -20,18 +19,12 @@
 \usepackage{tabularx}
 \input{glyphtounicode}
 
-
 %----------FONT OPTIONS----------
 % sans-serif
 % \usepackage[sfdefault]{FiraSans}
 % \usepackage[sfdefault]{roboto}
 % \usepackage[sfdefault]{noto-sans}
 % \usepackage[default]{sourcesanspro}
-
-% serif
-% \usepackage{CormorantGaramond}
-% \usepackage{charter}
-
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
@@ -76,14 +69,12 @@
     \end{tabular*}\vspace{-7pt}
 }
 
-% --- THIS IS THE NEW COMMAND TO FIX YOUR ERROR ---
 \newcommand{\resumeSubSubheading}[2]{
     \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \textit{\small#1} & \textit{\small #2} \\
     \end{tabular*}\vspace{-7pt}
 }
-% ------------------------------------------------
 
 \newcommand{\resumeProjectHeading}[2]{
     \item
@@ -109,17 +100,16 @@
 
 %----------HEADER----------
 \begin{center}
-    \textbf{\Huge \scshape Timothy Micheletto} \\ \vspace{1pt}
-    Machine Learning Engineer $|$ Engineering Leader \\ \vspace{1pt}
+    \textbf{\Huge \scshape Timothy Micheletto} \\ \vspace{4pt}
+    Staff Software Engineer $|$ Engineering Leader \\ \vspace{4pt}
     \small 0434 799 667 $|$ \href{mailto:tim.micheletto@gmail.com}{\underline{tim.micheletto@gmail.com}} $|$
     \href{https://linkedin.com/in/timmicheletto}{\underline{linkedin.com/in/timmicheletto}} $|$
     Melbourne, Australia
 \end{center}
 
 
-%-----------SUMMARY-----------
 \section{Professional Summary}
-  \small{Engineering leader and Staff Engineer with 20+ years of experience designing distributed systems at scale. Specialized in bridging the gap between Applied Science and Product Engineering to ship TB-scale inference pipelines and GenAI products. Proven track record of driving architectural strategy and shipping velocity, bringing a rigorous software engineering mindset to the challenges of scaling ML in production.}
+  \small{Staff Software Engineer and Engineering Leader with deep expertise in designing \textbf{distributed systems} and managing high-performing teams. Specializes in building the \textbf{ML infrastructure} and \textbf{data platforms} required to ship TB-scale ML products. Combines hands-on technical depth with a background in \textbf{Engineering Management} to drive architectural strategy, organizational alignment, and product delivery.}
 
 
 %-----------TECHNICAL SKILLS-----------
@@ -140,16 +130,16 @@
     % XERO (Grouped)
     \resumeSubheading
       {Xero}{Melbourne, Australia}
-      {Senior Engineer - Machine Learning (Research Team)}{Sep 2024 -- Sep 2025}
+      {Senior Engineer -- Machine Learning (Research Team)}{Sep 2024 -- Sep 2025}
       \resumeItemListStart
-        \resumeItem{Architected a \textbf{specialist model orchestrator} to maximize precision, implementing logic to dynamically select optimal predictions from an ensemble of specialist models.}
+        \resumeItem{Architected a \textbf{specialist model orchestrator} to maximize precision, employing dynamic logic to select optimal predictions from an ensemble of specialist models.}
         \resumeItem{Engineered \textbf{TB-scale distributed data pipelines} utilizing \textbf{Dask} and Python to perform batch inference on multi-terabyte datasets, establishing the foundational framework for offline model evaluation.}
-        \resumeItem{Core contributor to the engineering delivery of \textbf{JAX (Just Ask Xero)}, a headline GenAI feature announced at XeroCon 2025, specifically focusing on the automated bank reconciliation model.}
+        \resumeItem{Core contributor to the engineering delivery of \textbf{Just Ask Xero}, a headline GenAI feature announced at XeroCon 2025, specifically focusing on automated bank reconciliation.}
         \resumeItem{Established reproducible data foundations by building automated pipelines to generate training/validation datasets from OLTP sources, significantly accelerating experimentation cycles for Applied Scientists.}
       \resumeItemListEnd
 
     \resumeSubSubheading
-      {Engineering Manager - Machine Learning}{Sep 2023 -- Sep 2024}
+      {Engineering Manager -- Machine Learning}{Sep 2023 -- Sep 2024}
       \resumeItemListStart
         \resumeItem{Led the end-to-end engineering delivery of Xero’s first \textbf{GenAI product} (RAG-based customer support agent), coordinating cross-functional alignment between Applied Science and Customer Experience teams.}
         \resumeItem{Designed and executed the organizational restructuring of a 14-engineer team into 3 domain-aligned pods, resulting in optimized delivery velocity and reduced communication overhead.}
@@ -159,17 +149,17 @@
       \resumeItemListEnd
 
     \resumeSubSubheading
-      {Staff Engineer - Data Applications}{Mar 2022 -- Sep 2023}
+      {Staff Engineer -- Data Applications}{Mar 2022 -- Sep 2023}
       \resumeItemListStart
-        \resumeItem{Architected and led the implementation of the Cash flow Understanding and Prediction Service (CUPS) utilizing \textbf{Prefect} for orchestration; led the project from inception to General Availability (GA).}
+        \resumeItem{Architected and led the implementation of the Cash flow Understanding and Prediction Service (CUPS) utilizing \textbf{Prefect} for dynamic orchestration; led the project from inception to General Availability (GA).}
         \resumeItem{Designed distributed batch inference pipelines processing terabytes of data daily, generating cash flow predictions for the entire Xero customer base.}
-        \resumeItem{Standardized \textbf{Terraform} patterns for IAM Roles, significantly reducing infrastructure provisioning time for new ML services.}
+        \resumeItem{Standardized \textbf{Terraform} patterns for IAM Roles, significantly reducing infrastructure provisioning time.}
         \resumeItem{Built high-throughput, low-latency APIs (\textbf{FastAPI/AWS EKS/DynamoDB}) to serve predictions to millions of customers.}
         \resumeItem{Defined and implemented SLIs/SLOs for ML services to ensure high availability and enable proactive, data-driven incident response.}
       \resumeItemListEnd
 
     \resumeSubSubheading
-      {Senior Engineer - Data Applications}{May 2021 -- Mar 2022}
+      {Senior Engineer -- Data Applications}{May 2021 -- Mar 2022}
       \resumeItemListStart
         \resumeItem{Accelerated the deployment of heuristic cash flow models by building automated CI/CD pipelines for Python packages, reducing deployment friction between Science and Engineering.}
       \resumeItemListEnd
@@ -230,19 +220,8 @@
       {Bachelor of Engineering (Computer Systems)}{2000 -- 2002}
 
     \vspace{2pt}
-    \item \textbf{Certifications}:
-    \small{
-      DeepLearning.AI: Agentic AI (Nov 2025) $|$ Stanford University Online: Machine Learning Specialization (Oct 2025)
-    }
+    \resumeProjectHeading
+      {\textbf{Certifications:} DeepLearning.AI: Agentic AI (Nov 2025) $|$ Stanford Online: Machine Learning (Oct 2025)}{}
   \resumeSubHeadingListEnd
-
-
-%-----------INTERESTS-----------
-\section{Interests}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-     Surfing, Motorcycles, Crossfit, Machine Learning, Data Engineering
-    }}
- \end{itemize}
 
 \end{document}
