@@ -29,7 +29,7 @@
 \usepackage[hidelinks]{hyperref}
 
 \pagestyle{fancy}
-\fancyhf{} 
+\fancyhf{}
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
@@ -57,6 +57,14 @@
 }
 
 \newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\careerBreakSubheading}[4]{
   \vspace{-1pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
@@ -121,45 +129,40 @@
 %-----------EXPERIENCE-----------
 \section{\textbf{PROFESSIONAL EXPERIENCE}}
   \resumeSubHeadingListStart
-
     \resumeSubheading
-      {XERO}{Melbourne, Australia}
-      {Senior Engineer - Machine Learning}{September 2024 - September 2025}
+      {PROFESSIONAL DEVELOPMENT \& VOLUNTEERING}{September 2025 - Present}
+      {Career Break}{}
       \resumeItemListStart
-        \resumeItem{Engineered an aggregation model to select the best automated bank reconciliation predictions from an ensemble of specialist models, according to business rules implemented in Python.}
-        \resumeItem{Optimised a model evaluation pipeline to reliably process several terrabytes of data on a single EC2 instance utilising Dask distributed and parrallel batch processing which reduced the processing time from > 6 hours to < 2, significantly shortening the feedback loop for data scientists. }
-        \resumeItem{Refactored a Levenstein distance based algorithm implemented in Python and Pandas, using Cython and other high performance Python programming techniques to improve performance by 350\%. }
-        \resumeItem{Implemented ETL pipelines in SQL, Python and Pandas to produce training and evaluation datasets in Snowflake, enabling automated deterministic training and evaluation of models. }
+        \resumeItem{Online study.}
+        \resumeItem{Volunteer fire fighting with the CFA.}
+        \resumeItem{Personal projects.}
       \resumeItemListEnd
 
     \resumeSubheading
       {XERO}{Melbourne, Australia}
-      {Engineering Manager - Machine Learning}{September 2023 - September 2024}
+      {Engineering Manager - Machine Learning}{September 2023 - September 2025}
       \resumeItemListStart
-        \resumeItem{Led the end-to-end engineering delivery of a RAG based customer support agent, Xero's first implementation of GenAI, coordinating cross-functional alignment between Applied Science, Engineering and Customer Experience teams.}
-        \resumeItem{Designed and executed the organizational restructuring of a 14-engineer team into 3 domain-aligned pods, resulting in higher levels of motivation, happiness and productivity in the newly formed pods.}
-        \resumeItem{Directly managed and mentored a multi-disciplinary team of 9 engineers; championed professional development and refined engineering hiring practices to increase talent density and team cohesion.}
-        \resumeItem{Championed a number of AI platform initiative, standardising architectural patterns to reduce fragmentation, technical debt and increase delivery velocity.}
-        \resumeItem{Directed the technical implementation of Right to be Forgotten" workflows across all AI products data stores, ensuring GDPR compliance goals for the Data and AI org were met with zero production incidents.}
+        \resumeItem{Implemented a new hiring process for ML engineers including both technical and behavioural interviews, used to successfully recruit a new cohort of ML engineers.}
+        \resumeItem{Championed and executed the organizational restructuring of the 14-engineer AI production engineering team into cross functional, domain aligned pods, resulting in higher levels of motivation, happiness and productivity.}
+        \resumeItem{Delivered the first GenAI powered application at Xero in the form of RAG based customer support bot, implementing a brand new tech stack consisting of hosted Qdrant vector store, AWS Bedrock (Titan embedding + Claude LLM}.
+        \resumeItem{Co-managed Xero's AI Production engineering team of 14 engineers, deploying \& operationalising all of Xero's AI products in the Northern and Southern hemispheres.}
+        \resumeItem{Line managed 9 engineers ranging from recent graduates to Staff level with two achieving promotion.}
+        \resumeItem{Championed a number of AI platform initiatives, standardising architectural patterns to reduce fragmentation, technical debt and increase delivery velocity.}
       \resumeItemListEnd
 
     \resumeSubheading
       {XERO}{Melbourne, Australia}
-      {Staff Engineer - Data Applications}{March 2022 - September 2023}
+      {Staff Engineer - Data Applications}{May 2021 - September 2023}
       \resumeItemListStart
-        \resumeItem{Architected and led the implementation of the Cash flow Understanding and Prediction Service (CUPS) from data ingestion to prediction serving, utilising Snowflake, Prefect, Kubernetes, AWS DynamoDB and FastAPI. }
-        \resumeItem{Led the implementation distributed batch inference pipelines processing terabytes of data daily, generating cash flow predictions for all of Xero's > 2M customers, utilising Prefect, Dask-Kubernetes, AWS DynamoDB }
+        \resumeItem{Architected and led the implementation of the Cash flow Understanding and Prediction Service (CUPS) from data ingestion to prediction serving, utilising Snowflake, Prefect, Dask, Kubernetes, AWS DynamoDB and FastAPI. }
+        \resumeItem{Led the implementation distributed batch inference pipelines processing terabytes of data daily, generating cash flow predictions for all of Xero's customers, utilising Prefect, Dask, Kubernetes, AWS DynamoDB }
         \resumeItem{Led the Implementation of low latency serving and observability including SLOs/SLIs of predictions utilising FastAPI, AWS DynamoDB, AWS Kinesis, Snowflake}
         \resumeItem{Developed reusable Terraform modules to provision ML inference and serving infrastructure on AWS including IAM roles, S3 Buckets, DynamoDB tables, Secrets and Kinesis streams}
         \resumeItem{Championed cross-functional collaboration between Product and Applied Science, serving as the primary technical lead to ensure research-driven initiatives met engineering scalability and product-market goals.}
-      \resumeItemListEnd
-
-    \resumeSubheading
-      {XERO}{Melbourne, Australia}
-      {Senior Engineer - Data Applications}{May 2021 - March 2022}
-      \resumeItemListStart
-        \resumeItem{Accelerated the deployment of the cash flow forecasting model by building automated CI/CD pipelines for Python packages, reducing deployment friction between Science and Engineering.}
-        \resumeItem{Performed model enhancements and evaluation on cash flow forecasting model.}
+        \resumeItem{Engineered an aggregation model to select the best automated bank reconciliation predictions from an ensemble of specialist models, according to business rules implemented in Python.}
+        \resumeItem{Optimised a model evaluation pipeline to reliably process several terrabytes of data on a single EC2 instance utilising Dask distributed and parrallel batch processing which reduced the processing time from more than 6 hours to less than 2 hours, significantly shortening the feedback loop for data scientists. }
+        \resumeItem{Refactored a Levenstein distance based algorithm implemented in Python and Pandas, using Cython and other high performance Python programming techniques to improve performance by 350\%. }
+        \resumeItem{Implemented ETL pipelines in SQL, Python and Pandas to produce training and evaluation datasets in Snowflake, enabling automated deterministic training and evaluation of models. }
       \resumeItemListEnd
 
     \resumeSubheading
